@@ -8,7 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ClassementComponent } from './classement/classement.component';
 import { ConnexionGuard } from './connexion-guard.service';
-import { InexistantComponent } from './inexistant/inexistant.component';
 
 const appRoutes: Routes = [
   {path: 'connect', component: ConnexionComponent },
@@ -17,8 +16,7 @@ canActivate:[ConnexionGuard],
 children:[
   {path: 'accueil', component: AccueilComponent },
   {path:'classement', component:ClassementComponent},
-  {path:"", pathMatch:"full", redirectTo:"accueil"},
-  {path:"**", component:InexistantComponent}
+  {path:"", pathMatch:"full", redirectTo:"accueil"}
 ]
 }
 ];
@@ -28,8 +26,7 @@ children:[
     AppComponent,
     ConnexionComponent,
     AccueilComponent,
-    ClassementComponent,
-    InexistantComponent
+    ClassementComponent
   ],
   imports: [
     BrowserModule,
