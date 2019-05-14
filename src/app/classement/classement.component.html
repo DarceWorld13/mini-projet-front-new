@@ -1,0 +1,15 @@
+<div style="display:flex; flex-direction: row; flex-wrap: nowrap; justify-content: center;">
+  <button type="button" class="btn btn-primary" style ="margin-left:10px" routerLink="/accueil">Votes</button>
+  <button type="button" class="btn btn-primary" style ="margin-left:10px"routerLink="/classement">Classement</button>
+</div>
+
+<div id="leCollegue">
+<div class="card" style="width: 18rem;" *ngFor="let col of liste" >
+  <img src="{{col.photoUrl}}" class="card-img-top" alt="photo">
+  <div class="card-body">
+    <p class="card-text">Nom: {{col.nom|uppercase}}</p>
+    <p class="card-text">Prenoms: {{col.prenoms|uppercase}}</p>
+    <p class="card-text">Score: {{col.score}}</p>
+</div>
+</div>
+</div>

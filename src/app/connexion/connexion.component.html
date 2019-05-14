@@ -1,0 +1,29 @@
+<!-- Material form login -->
+<div class="card">
+    <h5 class="card-header info-color white-text text-center py-4">
+      <strong>Se Connecter</strong>
+    </h5>
+    <div class="card-body px-lg-5 pt-0" id ="all">
+      <form class="text-center" style="color: #757575;">
+        <div class="md-form">
+          <label for="materialLoginFormEmail">E-mail</label>
+          <input type="email" id="materialLoginFormEmail" class="form-control" [(ngModel)]="col.email" name ="materialLoginFormEmail" required>
+        </div>
+        <div class="md-form">
+          <label for="materialLoginFormPassword">Password</label>
+          <input type="password" id="materialLoginFormPassword" class="form-control" [(ngModel)]="col.motDePasse" name ="materialLoginFormPassword" required>
+        </div>
+        <div class="md-form">
+          <label for="photoUrl">photoUrl(optionnel)</label>
+          <input type="text" id="photoUrl" class="form-control">
+          </div>
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" (click)="valider()" type="submit">Se Connecter</button>
+      </form>
+    </div>
+  </div>
+
+<p>
+ nom:dem, email: amadou@sfr.fr et mot de passe : pass1
+ nom: jones bones jones : email :jonjones@jones.fr et mot de passe : pass2
+ nom : mcgregor email: mcgregor@sfr.fr et mot de passe : pass3
+</p>

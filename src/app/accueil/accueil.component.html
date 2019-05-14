@@ -1,0 +1,20 @@
+
+
+<div style="display:flex; flex-direction: row; flex-wrap: nowrap; justify-content: center;">
+    <button type="button" class="btn btn-primary" style ="margin-left:10px" routerLink="/accueil">Votes</button>
+    <button type="button" class="btn btn-primary" style ="margin-left:10px"routerLink="/classement">Classement</button>
+</div>
+
+<div id="leCollegue">
+    <div class="card" style="width: 18rem;" *ngFor="let col of liste" >
+        <img src="{{col.photoUrl}}" class="card-img-top" alt="photo">
+        <div class="card-body">
+          <h5 class="card-title">Collegue</h5>
+          <p class="card-text">NOM: {{col.nom|uppercase}}</p>
+          <p class="card-text">prenoms: {{col.prenoms|uppercase}}</p>
+          <i class="far fa-thumbs-up"style="margin-left:0; color:greenyellow" (click)="incrementer(col.email)" ></i>
+          <i class="far fa-thumbs-down" style="margin-left:100px; color:red"(click)="decrementer(col.email)"></i>
+      </div>
+    </div>
+
+</div>
