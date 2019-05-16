@@ -1,11 +1,12 @@
-
+<div id="contain">
 <h1 style="text-align:center">Top Collegues</h1>
 <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-end; ">
 
-  <div style="display:flex; flex-direction:row;" *ngFor="let col of liste">
-    <p>{{col.nom}}</p>
+  <div style="display:flex; flex-direction:row;" *ngFor="let col of liste" >
+    <p *ngIf="showed==true" >{{col.nom}}</p>
   </div>
-<button type="button" class="btn btn-info" style ="margin-left:10px" (click)="seDeconnecter()">Se deconnecter</button></div><br>
+<button type="button" class="btn btn-info" style ="margin-left:10px" (click)="seDeconnecter()" routerLink ='/connect'>Se deconnecter</button></div><br>
+</div>
 <hr>
 <main>
   <!--ici tout le contenu dynamique-->

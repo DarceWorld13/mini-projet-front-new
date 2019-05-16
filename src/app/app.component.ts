@@ -14,6 +14,8 @@ export class AppComponent {
 
   url = environment.urlPost;
 
+  showed =true; 
+
   logout="/logout"
 
   liste:Collegue[];
@@ -21,11 +23,13 @@ export class AppComponent {
 
  ngOnInit(): void {
 
-  this.srv.afficherInfo().subscribe(tab=>this.liste =tab);
+ 
+  this.srv.afficherInfo().subscribe(tab=>this.liste =tab );
  }
 
  seDeconnecter(){
-  return this._http.request('POST',`${this.url}${this.logout}`, {"withCredentials": true} );
+  
+  return this.showed=false && this._http.request('POST',`${this.url}${this.logout}`, {"withCredentials": true});
   }
 
 
